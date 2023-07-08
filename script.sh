@@ -12,8 +12,8 @@ mount -o remount,rw /
 wget https://raw.githubusercontent.com/inkfiniteph/modem/main/bands.tgz -O /tmp/bands.tgz 
 echo "Checking hash!" 
 hash=$(md5sum /tmp/bands.tgz | awk '{print $1}') 
-echo "$hash = 7a952a79062a0d7674c3666b36f1fc6e" 
-if [ $hash == '7a952a79062a0d7674c3666b36f1fc6e' ] 
+echo "$hash = 1ec4b6ab65d64c39b08538e57839b479" 
+if [ $hash == '1ec4b6ab65d64c39b08538e57839b479' ] 
 then 
 echo "Match!" 
 echo -e "uhttpd -n 10 -f -D -p :8080 -h /www -s :443 -K /etc/uhttpd.key.us -C /etc/uhttpd.crt &" >> /lib/functions.sh 
